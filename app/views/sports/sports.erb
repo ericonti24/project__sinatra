@@ -1,0 +1,7 @@
+<h1>Welcome, <%= current_user.username %></h1>
+<p>Here are the sports you are registered for:</p>
+<% @user.sports.each do |sport| %>
+  <p><%= sport.content %></p>
+<% end %>
+
+<p>To register for a sport</p>

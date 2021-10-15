@@ -13,17 +13,18 @@ class UsersController < ApplicationController
         erb :"/users/show"
     end
 
-    post '/signup' do 
-        @user = User.name(params)
+    post '/signup' do
+        binding.pry
+        @user = User.new(params)
         if params[:username].empty? || params[:email].empty? || params[:password].empty?
-            redirect '/signup'
+          redirect '/signup'
         end
         if @user.save
-            session[:user_id] = @user.id 
-            redirect '/sports'
+          session[:user_id] = @user.id
+          redirect '/sports'
         end
     end
-
+       
     get '/login' do 
         if logged_in?
             redirect '/sports'

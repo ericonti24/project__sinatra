@@ -1,0 +1,7 @@
+<h1><%= @user.username %>'s sport(s)'</h1>
+
+<% @user.sports.each do |sport| %>
+    <p> Here are the sports you are signed up for <%= sport.name %></p>
+<% end %>
+
+

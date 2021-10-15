@@ -27,8 +27,4 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  # get '/signup' do 
-  #   "Did it work?"
-  # end
-
 end
